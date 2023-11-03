@@ -1,33 +1,22 @@
 import React from "react";
-import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-const PassportContent = () => {
+const FirstStep = () => {
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Шаг 1 з 3</Text>
-      <Text style={styles.description}>
-        Праскануйце апошнюю старонку вашаго пашпарту
-      </Text>
-      <View style={styles.imageContainer}>
-        <Image
-          source={require("../../../assets/images/passport-image.png")}
-          resizeMode="stretch"
-          style={styles.image1}
-        />
-      </View>
+      <Text style={styles.description}>Праскануйце ваш твар</Text>
+      <View style={styles.imageContainer} />
 
       <Text style={styles.description2}>
-        Дзякуй, мы прасканавалі Дадзеные вашага пашпарту
-      </Text>
-      <Text style={styles.description2}>
-        На наступным кроку мы адскануем ваш твар
+        Мы папросім вас павярнуць галаву ў розныя бакі для Верыфікацыі
       </Text>
       <TouchableOpacity
         style={styles.submitButton}
-        onPress={() => navigation.navigate("FirstStep")}
+        onPress={() => navigation.navigate("FaceDirectionRight")}
       >
         <Text style={styles.submiButtonText}>Далей {">"}</Text>
       </TouchableOpacity>
@@ -35,7 +24,7 @@ const PassportContent = () => {
   );
 };
 
-export default PassportContent;
+export default FirstStep;
 
 const styles = StyleSheet.create({
   container: {
@@ -45,38 +34,34 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingTop: 30,
   },
-  image1: {
-    width: 275,
-    height: 180,
-    backgroundColor: "red",
-  },
-  imageContainer: {
-    width: 290,
-    height: 200,
-    backgroundColor: "white",
-    alignItems: "center",
-    marginBottom: 20,
-    marginTop: 5,
-  },
   title: {
     fontSize: 13,
     fontWeight: "bold",
+    marginBottom: 30,
+  },
+  imageContainer: {
+    width: 190,
+    height: 225,
+    backgroundColor: "white",
+    borderRadius: 100,
+    alignItems: "center",
     marginBottom: 15,
+    marginTop: 5,
   },
   description: {
     width: 267,
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "500",
     textAlign: "center",
-    marginBottom: 20,
+    marginBottom: 40,
   },
   description2: {
-    width: 267,
-    fontSize: 19,
+    width: 290,
+    fontSize: 21,
     fontWeight: "500",
     textAlign: "center",
     marginTop: 30,
-    marginBottom: 10,
+    marginBottom: 35,
   },
   submitButton: {
     width: 280,

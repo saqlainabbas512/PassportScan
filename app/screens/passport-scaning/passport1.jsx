@@ -13,7 +13,7 @@ const PassportImage = () => {
       <View style={styles.imageContainer}>
         <Image
           source={require("../../../assets/images/passport-image.png")}
-          resizeMode="contain"
+          resizeMode="stretch"
           style={styles.image1}
         />
       </View>
@@ -49,9 +49,9 @@ const styles = StyleSheet.create({
     paddingTop: 30,
   },
   image1: {
-    width: 250,
-    height: 200,
-    marginTop: -20,
+    width: 275,
+    height: 180,
+    backgroundColor: "red",
   },
   imageContainer: {
     width: 290,
