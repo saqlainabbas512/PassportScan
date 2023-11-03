@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 const FaceDirectionRight = () => {
@@ -11,7 +11,13 @@ const FaceDirectionRight = () => {
       <Text style={styles.description}>Праскануйце ваш твар</Text>
       <View style={styles.imageAndArrowaContainer}>
         <View style={styles.imageContainer} />
-        <View style={styles.triangle} />
+        <View>
+          <Image
+            source={require("../../../assets/images/navigationArrow.png")}
+            resizeMode="stretch"
+            style={styles.triangle}
+          />
+        </View>
       </View>
 
       <Text style={styles.description2}>
@@ -40,20 +46,13 @@ const styles = StyleSheet.create({
   imageAndArrowaContainer: {
     flex: 1,
     flexDirection: "row",
-    marginLeft: 55,
   },
   triangle: {
-    width: 0,
-    height: 0,
-    borderLeftWidth: 65,
-    borderLeftColor: "transparent",
-    borderRightWidth: 65,
-    borderRightColor: "transparent",
-    borderBottomWidth: 20,
-    borderBottomColor: "#BDF516",
-    transform: [{ rotate: "128deg" }],
-    marginTop: 200,
-    marginLeft: -70,
+    width: 35,
+    height: 130,
+    transform: [{ rotate: "215deg" }],
+    marginTop: 130,
+    marginLeft: -22,
   },
   title: {
     fontSize: 13,

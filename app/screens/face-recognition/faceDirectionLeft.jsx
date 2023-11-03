@@ -10,12 +10,13 @@ const FaceDirectionLeft = () => {
       <Text style={styles.title}>Шаг 1 з 3</Text>
       <Text style={styles.description}>Праскануйце ваш твар</Text>
       <View style={styles.imageAndArrowaContainer}>
-        <View style={styles.triangle} />
-        {/* <Image
-          source={require("../../../assets/images/arrow.jpg")}
-          resizeMode="contain"
-          style={styles.image2}
-        /> */}
+        <View>
+          <Image
+            source={require("../../../assets/images/navigationArrow.png")}
+            resizeMode="stretch"
+            style={styles.triangle}
+          />
+        </View>
         <View style={styles.imageContainer} />
       </View>
 
@@ -50,22 +51,12 @@ const styles = StyleSheet.create({
   imageAndArrowaContainer: {
     flex: 1,
     flexDirection: "row",
-    marginRight: 30,
+    marginRight: 35,
   },
   triangle: {
-    width: 0,
-    height: 0,
-    borderStyle: "solid",
-    borderTopWidth: 70,
-    borderBottomWidth: 70,
-    borderLeftWidth: 0,
-    borderRightWidth: 20,
-    borderTopColor: "transparent",
-    borderBottomColor: "transparent",
-    borderLeftColor: "transparent",
-    borderRightColor: "#BDF516",
+    width: 35,
+    height: 130,
     marginTop: 50,
-    marginRight: 12,
   },
   imageContainer: {
     width: 190,
